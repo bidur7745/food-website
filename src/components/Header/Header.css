@@ -1,0 +1,81 @@
+
+
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+}
+
+.header-contents {
+    max-width: 50%; /* Set max-width to ensure text stays on the left side */
+    padding-left: 5%; /* Adjust padding to move text to the left side */
+    animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+    font-weight: 500;
+    color: rgb(8, 66, 26);
+    font-size: max(3.5vw, 22px);
+    margin: 0 0 20px 0; /* Add some margin between heading and paragraph */
+}
+
+.header-contents p {
+    color: #000000;
+    font-size: 18px;
+    margin: 0 0 20px 0; /* Margin between paragraph and button */
+}
+
+.header-contents button {
+    color: #076a07;
+    height: 2rem;
+    width: 6rem;
+    font-weight: 500;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-contents button:hover {
+    background-color: #044404;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Media Query for 750px width */
+@media (max-width: 750px) {
+    .header {
+      height: 40vw; /* Adjust height for smaller screens */
+      margin: 20px auto; /* Adjust margin for better spacing */
+      border-radius: 30px; /* Reduce border radius for a tighter look */
+    }
+  
+    .header-contents {
+      max-width: 70%; /* Increase max-width to use more space */
+      padding-left: 10%; /* Adjust padding for better alignment */
+    }
+  
+    .header-contents p {
+      display: none; /* Hide the paragraph on smaller screens */
+    }
+  
+    .header-contents h2 {
+      font-size: max(4vw, 18px); /* Adjust font size of heading */
+      margin-bottom: 15px; /* Reduce the margin between heading and button */
+    }
+  
+    .header-contents button {
+      height: 2.5rem; /* Increase button size for easier interaction */
+      width: 7rem;
+      font-size: max(1.2vw, 14px); /* Adjust font size of the button */
+    }
+  }
+  
